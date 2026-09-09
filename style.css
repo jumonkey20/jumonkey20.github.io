@@ -17,17 +17,32 @@ body {
 }
 
 .sidebar {
-    width: 340px;
-    background-color: #ffffff;
+    width: 360px;
+    background-color: #f1f5f9;
     border-right: 1px solid #e2e8f0;
-    padding: 35px 25px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
+}
+
+/* Unified Curved Card Box Style with Hover Effect for Sidebar */
+.sidebar-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sidebar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -3px rgba(0, 0, 0, 0.08);
 }
 
 .profile-card h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #0f172a;
     margin-bottom: 4px;
 }
@@ -35,15 +50,15 @@ body {
 .tagline {
     color: #0ea5e9;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .university {
-    font-size: 14px;
+    font-size: 13px;
     color: #64748b;
-    margin-top: 8px;
+    margin-top: 6px;
 }
 
 .university i {
@@ -52,23 +67,23 @@ body {
 }
 
 .grade-badge {
-    font-size: 13px;
+    font-size: 12px;
     color: #16a34a;
     font-weight: 600;
     margin-top: 6px;
 }
 
-.bio h3, .skills h3, .sidebar-section h3 {
+.sidebar-card h3 {
     font-size: 13px;
     color: #334155;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
 
-.bio p {
-    font-size: 14px;
+.card-text {
+    font-size: 13px;
     color: #475569;
 }
 
@@ -82,9 +97,9 @@ body {
 .sidebar-item {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 13px;
     font-weight: 600;
     color: #0f172a;
     display: flex;
@@ -99,8 +114,8 @@ body {
 .sidebar-item-detailed {
     background-color: #f8fafc;
     border: 1px solid #e2e8f0;
-    padding: 10px 14px;
-    border-radius: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -112,7 +127,7 @@ body {
 }
 
 .sub-text {
-    font-size: 12px;
+    font-size: 11px;
     color: #64748b;
 }
 
@@ -137,6 +152,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 0 4px;
 }
 
 .btn {
@@ -145,21 +161,20 @@ body {
     justify-content: center;
     gap: 8px;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
-    transition: background 0.2s, opacity 0.2s;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
 }
 
 .github-btn { background-color: #0f172a; color: #ffffff; }
-.github-btn:hover { background-color: #1e293b; }
-
 .linkedin-btn { background-color: #0077b5; color: #ffffff; }
-.linkedin-btn:hover { opacity: 0.9; }
-
 .researchgate-btn { background-color: #00ccbb; color: #ffffff; }
-.researchgate-btn:hover { opacity: 0.9; }
 
 /* Main Content Area */
 .main-content {
@@ -179,13 +194,19 @@ body {
     font-size: 15px;
 }
 
-/* Detailed Research Cards */
+/* Detailed Research Cards with Curved Edges & Hover Effect */
 .detailed-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 30px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.detailed-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
 }
 
 .detailed-header {
@@ -237,7 +258,7 @@ body {
     margin-bottom: 20px;
     background-color: #f8fafc;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #f1f5f9;
 }
 
