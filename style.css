@@ -251,6 +251,50 @@ body {
     text-decoration: underline;
 }
 
+/* New Dedicated Experience Card Section Styles */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #8b5cf6;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.experience-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.experience-card h3 i {
+    color: #8b5cf6;
+    margin-right: 4px;
+}
+
+.experience-tag {
+    font-size: 11px;
+    background-color: #f5f3ff;
+    color: #7c3aed;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.experience-card p {
+    font-size: 14px;
+    color: #475569;
+}
+
 @media (max-width: 768px) {
     .container { flex-direction: column; }
     .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e8f0; }
