@@ -24,6 +24,36 @@
                 <p>Biomedical Science student focusing on the intersection of structural biology, biochemistry, and computational analysis. I explore workflows to analyze molecular interactions, protein-ligand docking profiles, and physiological signaling pathways.</p>
             </div>
 
+            <!-- Academic Modules (Moved to Sidebar) -->
+            <div class="sidebar-section">
+                <h3>Key Modules</h3>
+                <div class="sidebar-list">
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Neuroscience</span>
+                    </div>
+                    <div class="sidebar-item">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <span>Biochemistry</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional & Clinical Experience (Moved to Sidebar) -->
+            <div class="sidebar-section">
+                <h3>Experience</h3>
+                <div class="sidebar-list">
+                    <div class="sidebar-item-detailed">
+                        <strong>Boots Pharmacy</strong>
+                        <span class="sub-text">Morden | Prescription workflows & dispensary support</span>
+                    </div>
+                    <div class="sidebar-item-detailed">
+                        <strong>Chequers Dental Clinic</strong>
+                        <span class="sub-text">Basingstoke | Clinical observer & safety protocols</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- Technical Skills Section -->
             <div class="skills">
                 <h3>Technical & Lab Skills</h3>
@@ -44,88 +74,83 @@
                 <a href="https://github.com/jumonkey20" target="_blank" class="btn github-btn">
                     <i class="fa-brands fa-github"></i> GitHub Profile
                 </a>
-                
-                <!-- LINKEDIN BUTTON -->
                 <a href="https://www.linkedin.com/in/ali-haitham-al-jumaili-4a2753350/" target="_blank" class="btn linkedin-btn">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
                 </a>
-
-                <!-- RESEARCHGATE BUTTON -->
                 <a href="https://www.researchgate.net/profile/Ali-Al-Jumaili-2" target="_blank" class="btn researchgate-btn">
                     <i class="fa-solid fa-book-open"></i> ResearchGate Profile
                 </a>
             </div>
         </aside>
 
-        <!-- Main Content Area -->
+        <!-- Main Content Area: Detailed Research -->
         <main class="main-content">
-            <!-- Academic Profile Section -->
             <section class="section">
-                <h2>University Academic Profile</h2>
-                <p class="section-intro">Core Year 2 specialization pathways at the University of Surrey:</p>
-                <div class="module-grid">
-                    <div class="module-card">
-                        <i class="fa-solid fa-brain module-icon"></i>
-                        <span>Neuroscience</span>
-                    </div>
-                    <div class="module-card">
-                        <i class="fa-solid fa-flask-vial module-icon"></i>
-                        <span>Biochemistry</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Professional & Clinical Experience Section (New Dedicated Card Layout) -->
-            <section class="section" style="margin-top: 40px;">
-                <h2>Professional & Clinical Experience</h2>
-                <p class="section-intro">Practical healthcare exposure and clinical environments:</p>
+                <h2>Research & Computational Projects</h2>
+                <p class="section-intro">In-depth technical overviews of automated bioinformatics pipelines and molecular modeling workflows:</p>
                 
-                <div class="experience-grid">
-                    <!-- Boots Pharmacy -->
-                    <div class="experience-card">
-                        <div class="project-header">
-                            <h3><i class="fa-solid fa-pills experience-icon"></i> Boots Pharmacy</h3>
-                            <span class="experience-tag">Morden</span>
+                <div class="detailed-project-stack">
+                    
+                    <!-- Project 1: Pseudomonas -->
+                    <div class="detailed-card">
+                        <div class="detailed-header">
+                            <h3><i class="fa-solid fa-code"></i> Pseudomonas oprD Gene & Resistance Profiling</h3>
+                            <span class="card-tag spec">Bioinformatics / Python</span>
                         </div>
-                        <p>Gained hands-on experience in a community pharmacy setting, engaging with prescription workflows, over-the-counter healthcare guidance, patient communication, and dispensary support operations.</p>
+                        <p class="project-summary">
+                            An automated bioinformatics pipeline designed to analyze genetic divergence and antimicrobial resistance markers in <em>Pseudomonas aeruginosa</em> strains.
+                        </p>
+                        
+                        <div class="project-specs">
+                            <div class="spec-block">
+                                <strong>Biological Context:</strong>
+                                <p>Targets the <code>oprD</code> gene encoding the outer-membrane porin channel OprD, a major entry port for carbapenem antibiotics. Mutations or identity drops lead to clinical multidrug resistance.</p>
+                            </div>
+                            <div class="spec-block">
+                                <strong>Pipeline Methodology:</strong>
+                                <ul>
+                                    <li><strong>Data Parsing:</strong> Utilizes Biopython's <code>SeqIO</code> to ingest multi-FASTA files containing reference strain PAO1 (Accession: <code>NP_249649.1</code>) and variant clinical isolates.</li>
+                                    <li><strong>Global Alignment:</strong> Implements the Needleman-Wunsch algorithm via Biopython's <code>PairwiseAligner()</code> with custom gap scores (open: -10, extend: -0.5).</li>
+                                    <li><strong>Quantification & Export:</strong> Programmatically calculates match counts, total lengths, and percentage identities, structuring results into a Pandas DataFrame exported as <code>alignment_results.csv</code>.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tech-stack-label">Stack: Python, Biopython, Pandas, Git, GitHub Codespaces</span>
+                            <a href="https://github.com/jumonkey20/pseudomonas-snp-profiling" target="_blank" class="repo-link">View GitHub Repository →</a>
+                        </div>
                     </div>
 
-                    <!-- Chequers Dental Clinic -->
-                    <div class="experience-card">
-                        <div class="project-header">
-                            <h3><i class="fa-solid fa-tooth experience-icon"></i> Chequers Dental Clinic</h3>
-                            <span class="experience-tag">Basingstoke</span>
+                    <!-- Project 2: Molecular Docking -->
+                    <div class="detailed-card" style="margin-top: 30px;">
+                        <div class="detailed-header">
+                            <h3><i class="fa-solid fa-dna"></i> p53 & PRIMA-1 Molecular Docking Pipeline</h3>
+                            <span class="card-tag spec">Structural Biology</span>
                         </div>
-                        <p>Served as a clinical observer, shadowing dental professionals during patient procedures, observing diagnostic workflows, and reinforcing strict standards of cross-infection control and clinical safety.</p>
+                        <p class="project-summary">
+                            A virtual screening and structural bioinformatics workflow investigating ligand-protein binding interactions to evaluate pharmacological restoration of mutant p53 proteins.
+                        </p>
+                        
+                        <div class="project-specs">
+                            <div class="spec-block">
+                                <strong>Biological Context:</strong>
+                                <p>Mutations in the tumor suppressor protein p53 are prevalent in human cancers. PRIMA-1 acts as a small molecule capable of reactivating mutant p53 conformations.</p>
+                            </div>
+                            <div class="spec-block">
+                                <strong>Pipeline Methodology:</strong>
+                                <ul>
+                                    <li><strong>Structure Preparation:</strong> Imported target macromolecule PDB structures (such as 1TUP) and prepared ligand coordinate files into PDBQT format.</li>
+                                    <li><strong>Grid Box Optimization:</strong> Defined active binding site coordinates and bounding boxes to bound conformational search spaces.</li>
+                                    <li><strong>Execution & Scoring:</strong> Executed AutoDock Vina calculations via PyRx to compute binding affinities (kcal/mol) and rank docking conformations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tech-stack-label">Stack: PyRx, AutoDock Vina, PDB Data Banks</span>
+                            <a href="https://github.com/jumonkey20/p53-prima1-molecular-docking" target="_blank" class="repo-link">View Project Scope →</a>
+                        </div>
                     </div>
-                </div>
-            </section>
 
-            <!-- Research & Projects Section -->
-            <section class="section" style="margin-top: 40px;">
-                <h2>Research & Projects</h2>
-                <p class="section-intro">Independent computational workflows and laboratory data analysis:</p>
-                
-                <div class="project-grid">
-                    <!-- Pseudomonas Resistance Profiling Project -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3><i class="fa-solid fa-code"></i> Pseudomonas oprD Gene Profiling</h3>
-                            <span class="tech-tag spec">Bioinformatics</span>
-                        </div>
-                        <p>An automated Python pipeline utilizing Biopython and Pandas to analyze genetic divergence and antimicrobial resistance markers. Performs Needleman-Wunsch global alignments on outer-membrane porin sequences to track sequence identity drops.</p>
-                        <a href="https://github.com/jumonkey20/pseudomonas-snp-profiling" target="_blank" class="repo-link">View Repository →</a>
-                    </div>
-
-                    <!-- Molecular Docking Project -->
-                    <div class="project-card">
-                        <div class="project-header">
-                            <h3><i class="fa-solid fa-dna"></i> p53 & PRIMA-1 Molecular Docking</h3>
-                            <span class="tech-tag">Bioinformatics</span>
-                        </div>
-                        <p>A virtual screening pipeline investigating ligand-protein binding interactions. This project models the docking conformations and binding affinities of PRIMA-1 against target receptors like 1TUP using PyRx and AutoDock Vina layouts.</p>
-                        <a href="https://github.com/jumonkey20/p53-prima1-molecular-docking" target="_blank" class="repo-link">View Project Scope →</a>
-                    </div>
                 </div>
             </section>
         </main>

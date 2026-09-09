@@ -17,13 +17,13 @@ body {
 }
 
 .sidebar {
-    width: 320px;
+    width: 340px;
     background-color: #ffffff;
     border-right: 1px solid #e2e8f0;
-    padding: 40px 25px;
+    padding: 35px 25px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
 }
 
 .profile-card h2 {
@@ -58,10 +58,10 @@ body {
     margin-top: 6px;
 }
 
-.bio h3, .skills h3 {
-    font-size: 14px;
+.bio h3, .skills h3, .sidebar-section h3 {
+    font-size: 13px;
     color: #334155;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -72,27 +72,71 @@ body {
     color: #475569;
 }
 
+/* Sidebar Modules & Experience Lists */
+.sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-item {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-item i {
+    color: #0ea5e9;
+}
+
+.sidebar-item-detailed {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.sidebar-item-detailed strong {
+    font-size: 13px;
+    color: #0f172a;
+}
+
+.sub-text {
+    font-size: 12px;
+    color: #64748b;
+}
+
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
 }
 
 .skill-badge {
     background-color: #f1f5f9;
     color: #475569;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    padding: 4px 10px;
+    padding: 4px 8px;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
 }
 
-/* Vertically Stack Link Buttons */
+/* Links Sidebar */
 .links {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
 .btn {
@@ -100,43 +144,24 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px;
+    padding: 10px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     transition: background 0.2s, opacity 0.2s;
 }
 
-.github-btn {
-    background-color: #0f172a;
-    color: #ffffff;
-}
+.github-btn { background-color: #0f172a; color: #ffffff; }
+.github-btn:hover { background-color: #1e293b; }
 
-.github-btn:hover {
-    background-color: #1e293b;
-}
+.linkedin-btn { background-color: #0077b5; color: #ffffff; }
+.linkedin-btn:hover { opacity: 0.9; }
 
-/* Styled LinkedIn Brand Accent Color */
-.linkedin-btn {
-    background-color: #0077b5;
-    color: #ffffff;
-}
+.researchgate-btn { background-color: #00ccbb; color: #ffffff; }
+.researchgate-btn:hover { opacity: 0.9; }
 
-.linkedin-btn:hover {
-    opacity: 0.9;
-}
-
-/* Styled ResearchGate Brand Button */
-.researchgate-btn {
-    background-color: #00ccbb;
-    color: #ffffff;
-}
-
-.researchgate-btn:hover {
-    opacity: 0.9;
-}
-
+/* Main Content Area */
 .main-content {
     flex: 1;
     padding: 40px 50px;
@@ -150,94 +175,108 @@ body {
 
 .section-intro {
     color: #64748b;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 15px;
 }
 
-.module-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.module-card {
+/* Detailed Research Cards */
+.detailed-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
-    padding: 25px;
     border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #0f172a;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    padding: 30px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
-.module-icon {
-    font-size: 24px;
-    color: #0ea5e9;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.project-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-.project-header {
+.detailed-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 12px;
-    gap: 10px;
+    gap: 15px;
 }
 
-.project-card h3 {
-    font-size: 16px;
+.detailed-card h3 {
+    font-size: 18px;
     color: #0f172a;
 }
 
-.project-card h3 i {
+.detailed-card h3 i {
     color: #0ea5e9;
-    margin-right: 4px;
+    margin-right: 6px;
 }
 
-.tech-tag {
+.card-tag {
     font-size: 11px;
-    background-color: #f0fdf4;
-    color: #16a34a;
-    padding: 2px 8px;
+    background-color: #f1f5f9;
+    color: #475569;
+    padding: 3px 10px;
     border-radius: 12px;
     font-weight: 600;
     white-space: nowrap;
+    border: 1px solid #e2e8f0;
 }
 
-.tech-tag.spec {
+.card-tag.spec {
     background-color: #f0f9ff;
     color: #0284c7;
+    border-color: #bae6fd;
 }
 
-.project-card p {
+.project-summary {
+    font-size: 15px;
+    color: #334155;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.project-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #f1f5f9;
+}
+
+.spec-block strong {
+    font-size: 13px;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.spec-block p, .spec-block ul {
     font-size: 14px;
     color: #475569;
-    margin-bottom: 16px;
+}
+
+.spec-block ul {
+    padding-left: 18px;
+}
+
+.spec-block li {
+    margin-bottom: 4px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-stack-label {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 600;
 }
 
 .repo-link {
@@ -251,53 +290,8 @@ body {
     text-decoration: underline;
 }
 
-/* New Dedicated Experience Card Section Styles */
-.experience-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
-}
-
-.experience-card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-left: 4px solid #8b5cf6;
-    border-radius: 8px;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.experience-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-.experience-card h3 i {
-    color: #8b5cf6;
-    margin-right: 4px;
-}
-
-.experience-tag {
-    font-size: 11px;
-    background-color: #f5f3ff;
-    color: #7c3aed;
-    padding: 2px 8px;
-    border-radius: 12px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.experience-card p {
-    font-size: 14px;
-    color: #475569;
-}
-
 @media (max-width: 768px) {
     .container { flex-direction: column; }
     .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e8f0; }
     .main-content { padding: 30px 20px; }
-    .module-grid { grid-template-columns: 1fr; }
 }
