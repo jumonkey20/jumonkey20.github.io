@@ -51,6 +51,13 @@ body {
     margin-right: 6px;
 }
 
+.grade-badge {
+    font-size: 13px;
+    color: #16a34a;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
 .bio h3, .skills h3 {
     font-size: 14px;
     color: #334155;
@@ -117,6 +124,16 @@ body {
 }
 
 .linkedin-btn:hover {
+    opacity: 0.9;
+}
+
+/* Styled ResearchGate Brand Button */
+.researchgate-btn {
+    background-color: #00ccbb;
+    color: #ffffff;
+}
+
+.researchgate-btn:hover {
     opacity: 0.9;
 }
 
@@ -221,16 +238,6 @@ body {
     font-size: 14px;
     color: #475569;
     margin-bottom: 16px;
-}
-
-.protocol-list {
-    padding-left: 16px;
-    font-size: 13px;
-    color: #475569;
-}
-
-.protocol-list li {
-    margin-bottom: 8px;
 }
 
 .repo-link {
