@@ -27,6 +27,9 @@
             <div class="skills">
                 <h3>Technical & Lab Skills</h3>
                 <div class="skills-grid">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Biopython</span>
+                    <span class="skill-badge">Pandas</span>
                     <span class="skill-badge">PyRx / Vina</span>
                     <span class="skill-badge">Molecular Docking</span>
                     <span class="skill-badge">Biochemical Assays</span>
@@ -41,7 +44,7 @@
                     <i class="fa-brands fa-github"></i> GitHub Profile
                 </a>
                 
-                <!-- NEW LINKEDIN BUTTON  -->
+                <!-- LINKEDIN BUTTON -->
                 <a href="https://www.linkedin.com/in/ali-haitham-al-jumaili-4a2753350/" target="_blank" class="btn linkedin-btn">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
                 </a>
@@ -72,6 +75,16 @@
                 <p class="section-intro">Independent computational workflows and laboratory data analysis:</p>
                 
                 <div class="project-grid">
+                    <!-- Pseudomonas Resistance Profiling Project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3><i class="fa-solid fa-code"></i> Pseudomonas oprD Gene Profiling</h3>
+                            <span class="tech-tag spec">Bioinformatics</span>
+                        </div>
+                        <p>An automated Python pipeline utilizing Biopython and Pandas to analyze genetic divergence and antimicrobial resistance markers. Performs Needleman-Wunsch global alignments on outer-membrane porin sequences to track sequence identity drops.</p>
+                        <a href="https://github.com/jumonkey20/pseudomonas-snp-profiling" target="_blank" class="repo-link">View Repository →</a>
+                    </div>
+
                     <!-- Molecular Docking Project -->
                     <div class="project-card">
                         <div class="project-header">
@@ -80,19 +93,6 @@
                         </div>
                         <p>A virtual screening pipeline investigating ligand-protein binding interactions. This project models the docking conformations and binding affinities of PRIMA-1 against target receptors like 1TUP using PyRx and AutoDock Vina layouts.</p>
                         <a href="https://github.com/jumonkey20/p53-prima1-molecular-docking" target="_blank" class="repo-link">View Project Scope →</a>
-                    </div>
-
-                    <!-- Pipeline Protocol Card -->
-                    <div class="project-card protocol-card">
-                        <div class="project-header">
-                            <h3><i class="fa-solid fa-list-check"></i> Virtual Screening Protocol</h3>
-                            <span class="tech-tag spec">Methodology</span>
-                        </div>
-                        <ol class="protocol-list">
-                            <li><strong>Load Molecules:</strong> Prepare and import PDBQT ligand and macromolecule target structural files.</li>
-                            <li><strong>Search Space:</strong> Define bounding box grids around receptor active binding coordinates.</li>
-                            <li><strong>Execute Vina:</strong> Run docking calculations to compute relative binding affinities (kcal/mol).</li>
-                        </ol>
                     </div>
                 </div>
             </section>
