@@ -26,7 +26,7 @@ body {
     gap: 20px;
 }
 
-/* Unified Curved Card Box Style with Hover Effect for Sidebar */
+/* Unified Curved Card Box Style with Hover Effect */
 .sidebar-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -87,7 +87,7 @@ body {
     color: #475569;
 }
 
-/* Sidebar Modules & Experience Lists */
+/* Sidebar Lists */
 .sidebar-list {
     display: flex;
     flex-direction: column;
@@ -135,6 +135,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
+    margin-bottom: 12px;
 }
 
 .skill-badge {
@@ -145,6 +146,29 @@ body {
     padding: 4px 8px;
     border-radius: 6px;
     border: 1px solid #e2e8f0;
+}
+
+/* Modal Trigger Button inside Technical Skills */
+.modal-trigger-btn {
+    width: 100%;
+    background-color: #f0f9ff;
+    color: #0284c7;
+    border: 1px solid #bae6fd;
+    padding: 9px 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal-trigger-btn:hover {
+    background-color: #e0f2fe;
+    transform: translateY(-1px);
 }
 
 /* Links Sidebar */
@@ -194,7 +218,7 @@ body {
     font-size: 15px;
 }
 
-/* Detailed Research Cards with Curved Edges & Hover Effect */
+/* Detailed Research Cards */
 .detailed-card {
     background-color: #ffffff;
     border: 1px solid #e2e8f0;
@@ -311,8 +335,143 @@ body {
     text-decoration: underline;
 }
 
+/* Modal Styling */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 650px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 20px 25px;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f8fafc;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    color: #0f172a;
+}
+
+.modal-sub {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 2px;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #64748b;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-modal-btn:hover {
+    color: #0f172a;
+}
+
+.modal-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-category h4 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #334155;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 4px;
+}
+
+.skill-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.skill-row.success {
+    background-color: #f0fdf4;
+    border: 1px solid #dcfce7;
+    color: #166534;
+}
+
+.skill-row.pending {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.skill-row.success .skill-name i {
+    color: #16a34a;
+}
+
+.skill-row.pending .skill-name i {
+    color: #94a3b8;
+}
+
+.skill-status {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.skill-status.verified {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.skill-status.incomplete {
+    background-color: #f1f5f9;
+    color: #64748b;
+}
+
 @media (max-width: 768px) {
     .container { flex-direction: column; }
     .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #e2e8f0; }
     .main-content { padding: 30px 20px; }
+    .modal-content { max-height: 90vh; }
 }

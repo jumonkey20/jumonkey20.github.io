@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Haitham Al-Jumaili | Biomedical Science Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -69,6 +69,10 @@
                     <span class="skill-badge">Data Analysis</span>
                     <span class="skill-badge">Structural Biology</span>
                 </div>
+                <!-- Interactive Button to Open Lab Skills Modal -->
+                <button class="modal-trigger-btn" onclick="openSkillsModal()">
+                    <i class="fa-solid fa-clipboard-check"></i> View Assessed Lab Skills
+                </button>
             </div>
 
             <!-- Social Professional Connections Block -->
@@ -157,6 +161,115 @@
             </section>
         </main>
     </div>
+
+    <!-- Lab Skills Modal Popup -->
+    <div id="skillsModal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div>
+                    <h3>Practical Lab Skill Assessments</h3>
+                    <p class="modal-sub">Verified competencies and ongoing training records</p>
+                </div>
+                <button class="close-modal-btn" onclick="closeSkillsModal()">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                
+                <!-- Category 1 -->
+                <div class="skill-category">
+                    <h4>Good Laboratory Practice (100%)</h4>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Appropriate use of PPE</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Organisation of bench area and experiments</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Clearing and disinfecting bench areas</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="skill-category">
+                    <h4>General Laboratory Techniques (100%)</h4>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Aseptic technique</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Use of the light microscope</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Use of spectrophotometers</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Use of automatic pipettes</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Use of a laboratory balance</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Use of centrifuges and microfuges</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Serial dilution</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Use of a pH meter</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="skill-category">
+                    <h4>Subject-Specific Laboratory Skills (100%)</h4>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Bacterial sub-culture</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row success">
+                        <span class="skill-name"><i class="fa-solid fa-circle-check"></i> Staining</span>
+                        <span class="skill-status verified">Verified (1/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Setting up PCR reactions</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                    <div class="skill-row pending">
+                        <span class="skill-name"><i class="fa-solid fa-circle-xmark"></i> Performing gel electrophoresis</span>
+                        <span class="skill-status incomplete">Incomplete (-/1)</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal Control -->
+    <script>
+        function openSkillsModal() {
+            document.getElementById('skillsModal').style.display = 'flex';
+        }
+        function closeSkillsModal() {
+            document.getElementById('skillsModal').style.display = 'none';
+        }
+        // Close modal when clicking outside the content box
+        window.onclick = function(event) {
+            let modal = document.getElementById('skillsModal');
+            if (event.target === modal) {
+                closeSkillsModal();
+            }
+        }
+    </script>
 
 </body>
 </html>
