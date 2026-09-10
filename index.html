@@ -12,7 +12,6 @@
     <div class="container">
         <!-- Profile Sidebar -->
         <aside class="sidebar">
-            <!-- Title Card -->
             <div class="sidebar-card profile-card">
                 <h2>Ali Haitham Al-Jumaili</h2>
                 <p class="tagline">BSc Biomedical Science (Second Year)</p>
@@ -20,13 +19,11 @@
                 <p class="grade-badge">First-Year Grade: 2:1 Achieved</p>
             </div>
             
-            <!-- About Me Card -->
             <div class="sidebar-card">
                 <h3>About Me</h3>
                 <p class="card-text">Biomedical Science student focusing on the intersection of structural biology, biochemistry, and computational analysis. I explore workflows to analyze molecular interactions, protein-ligand docking profiles, and physiological signaling pathways.</p>
             </div>
 
-            <!-- Academic Modules Card -->
             <div class="sidebar-card">
                 <h3>Key Modules</h3>
                 <div class="sidebar-list">
@@ -41,7 +38,6 @@
                 </div>
             </div>
 
-            <!-- Professional & Clinical Experience Card -->
             <div class="sidebar-card">
                 <h3>Experience</h3>
                 <div class="sidebar-list">
@@ -56,7 +52,6 @@
                 </div>
             </div>
 
-            <!-- Technical Skills Card -->
             <div class="sidebar-card">
                 <h3>Technical & Lab Skills</h3>
                 <div class="skills-grid">
@@ -69,13 +64,11 @@
                     <span class="skill-badge">Data Analysis</span>
                     <span class="skill-badge">Structural Biology</span>
                 </div>
-                <!-- Interactive Button to Open Lab Skills Modal -->
                 <button class="modal-trigger-btn" onclick="openModal('skillsModal')">
                     <i class="fa-solid fa-clipboard-check"></i> View Assessed Lab Skills
                 </button>
             </div>
 
-            <!-- Social Professional Connections Block -->
             <div class="links">
                 <a href="https://github.com/jumonkey20" target="_blank" class="btn github-btn">
                     <i class="fa-brands fa-github"></i> GitHub Profile
@@ -96,8 +89,7 @@
                 <p class="section-intro">Click any project card below to view the full README documentation and video walkthrough:</p>
                 
                 <div class="detailed-project-stack">
-                    
-                    <!-- Project 1: Pseudomonas (Clickable Card) -->
+                    <!-- Project 1: Pseudomonas -->
                     <div class="detailed-card clickable-card" onclick="openModal('pseudomonasModal')">
                         <div class="detailed-header">
                             <h3><i class="fa-solid fa-code"></i> Pseudomonas oprD Gene & Resistance Profiling</h3>
@@ -106,7 +98,6 @@
                         <p class="project-summary">
                             An automated bioinformatics pipeline designed to analyze genetic divergence and antimicrobial resistance markers in <em>Pseudomonas aeruginosa</em> strains[cite: 1].
                         </p>
-                        
                         <div class="project-specs">
                             <div class="spec-block">
                                 <strong>Biological Context:</strong>
@@ -119,7 +110,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 2: Molecular Docking (Clickable Card) -->
+                    <!-- Project 2: Molecular Docking -->
                     <div class="detailed-card clickable-card" style="margin-top: 30px;" onclick="openModal('p53Modal')">
                         <div class="detailed-header">
                             <h3><i class="fa-solid fa-dna"></i> p53 & PRIMA-1 Molecular Docking Pipeline</h3>
@@ -128,7 +119,6 @@
                         <p class="project-summary">
                             A virtual screening and structural bioinformatics workflow investigating ligand-protein binding interactions to evaluate pharmacological restoration of mutant p53 proteins[cite: 2].
                         </p>
-                        
                         <div class="project-specs">
                             <div class="spec-block">
                                 <strong>Biological Context:</strong>
@@ -140,13 +130,12 @@
                             <span class="view-prompt">Click to view Full README & Video Walkthrough →</span>
                         </div>
                     </div>
-
                 </div>
             </section>
         </main>
     </div>
 
-    <!-- Lab Skills Modal Popup -->
+    <!-- Lab Skills Modal -->
     <div id="skillsModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
@@ -156,10 +145,7 @@
                 </div>
                 <button class="close-modal-btn" onclick="closeModal('skillsModal')">&times;</button>
             </div>
-            
             <div class="modal-body">
-                
-                <!-- Category 1 -->
                 <div class="skill-category">
                     <h4>Good Laboratory Practice (100%)</h4>
                     <div class="skill-row success">
@@ -176,7 +162,6 @@
                     </div>
                 </div>
 
-                <!-- Category 2 -->
                 <div class="skill-category">
                     <h4>General Laboratory Techniques (100%)</h4>
                     <div class="skill-row success">
@@ -213,7 +198,6 @@
                     </div>
                 </div>
 
-                <!-- Category 3 -->
                 <div class="skill-category">
                     <h4>Subject-Specific Laboratory Skills (100%)</h4>
                     <div class="skill-row success">
@@ -233,7 +217,6 @@
                         <span class="skill-status incomplete">Incomplete (-/1)</span>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
@@ -248,26 +231,64 @@
                 </div>
                 <button class="close-modal-btn" onclick="closeModal('pseudomonasModal')">&times;</button>
             </div>
-            
             <div class="modal-body">
-                <!-- Embedded Video Walkthrough -->
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?autoplay=1" title="Pseudomonas Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <!-- Full README Documentation -->
                 <div class="readme-section">
-                    <h4># Overview</h4>
+                    <h4>In Silico Profiling of Resistance and Virulence Markers in Pseudomonas aeruginosa</h4>
                     <p>This project investigates the genetic divergence of key resistance and outer-membrane porin genes (such as oprD) across different strains of <em>Pseudomonas aeruginosa</em>[cite: 1]. By leveraging programmatic sequence alignment tools in Python, this workflow automates the detection of Single Nucleotide Polymorphisms (SNPs) and calculates percentage identity matrices between reference and clinical isolates[cite: 1].</p>
-                    
-                    <h4># Objectives</h4>
+
+                    <h4>Objectives</h4>
                     <ul>
                         <li><strong>Automate Data Retrieval:</strong> Curate and manage FASTA-formatted nucleotide sequences from NCBI GenBank[cite: 1].</li>
                         <li><strong>Sequence Alignment:</strong> Implement global pairwise sequence alignments using Biopython[cite: 1].</li>
                         <li><strong>Variant Analysis:</strong> Quantify sequence identity scores and map divergence to understand potential mechanisms of antimicrobial resistance[cite: 1].</li>
                     </ul>
 
-                    <h4># Repository Link</h4>
+                    <h4>Methodology</h4>
+                    <ol>
+                        <li><strong>Data Collection:</strong> Retrieved full-length coding sequences for target resistance-associated loci from *Pseudomonas aeruginosa* PAO1 (reference) and select variant strains via NCBI[cite: 1].</li>
+                        <li><strong>Computational Pipeline:</strong> Developed a Python-based analysis script utilizing the <code>Biopython</code> library (`Bio.Align`)[cite: 1].</li>
+                        <li><strong>Scoring Matrix:</strong> Executed global Needleman-Wunsch alignments with optimized gap penalties to evaluate sequence conservation and highlight structural mutation hotspots[cite: 1].</li>
+                    </ol>
+
+                    <h4>Tech Stack & Tools</h4>
+                    <ul>
+                        <li><strong>Language:</strong> Python 3.x[cite: 1]</li>
+                        <li><strong>Libraries:</strong> Biopython, Pandas, Matplotlib[cite: 1]</li>
+                        <li><strong>Databases:</strong> NCBI Nucleotide / GenBank[cite: 1]</li>
+                    </ul>
+
+                    <h4>Results & Findings</h4>
+                    <ul>
+                        <li>Successfully established an automated pipeline capable of parsing multi-FASTA files and outputting comparative alignment identity metrics[cite: 1].</li>
+                        <li>Identified regional sequence variations that correlate with known porin-mediated resistance profiles in clinical variants[cite: 1].</li>
+                    </ul>
+
+                    <h4>Future Extensions</h4>
+                    <p>Integrating structural modeling (AlphaFold/PyMOL) to visualize how identified SNP substitutions impact extracellular loops of the target membrane proteins[cite: 1].</p>
+
+                    <h4>Step-by-Step Replication Guide</h4>
+                    <p><strong>Step 1: Create the Project Structure and Dependencies</strong>[cite: 1]</p>
+                    <p>Open your repository in GitHub Codespaces or your local terminal[cite: 1]. Create a file named `requirements.txt` and add package dependencies[cite: 1]:</p>
+                    <pre><code>biopython
+pandas</code></pre>
+                    <p>Install dependencies via terminal[cite: 1]:</p>
+                    <pre><code>pip install -r requirements.txt</code></pre>
+
+                    <p><strong>Step 2: Create the FASTA Data File</strong>[cite: 1]</p>
+                    <p>Create a folder named `data/`. Inside, create `oprD_sequences.fasta` with your reference and variant protein sequences[cite: 1].</p>
+
+                    <p><strong>Step 3: Create the Python Analysis Script</strong>[cite: 1]</p>
+                    <p>In the root directory, create `analyze_resistance.py` and implement the sequence parsing, alignment, and CSV export logic[cite: 1].</p>
+
+                    <p><strong>Step 4: Execute the Pipeline</strong>[cite: 1]</p>
+                    <pre><code>python analyze_resistance.py</code></pre>
+                    <p>Verify that the script generates the `alignment_results.csv` output summary file[cite: 1].</p>
+
+                    <h4>Repository Link</h4>
                     <p><a href="https://github.com/jumonkey20/pseudomonas-snp-profiling" target="_blank" class="repo-link">View Full GitHub Repository →</a></p>
                 </div>
             </div>
@@ -284,20 +305,35 @@
                 </div>
                 <button class="close-modal-btn" onclick="closeModal('p53Modal')">&times;</button>
             </div>
-            
             <div class="modal-body">
-                <!-- Embedded Video Walkthrough -->
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?autoplay=1" title="p53 Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <!-- Full README Documentation -->
                 <div class="readme-section">
-                    <h4> About This Project</h4>
-                    <p>Authored by Ali Al-Jumaili, an undergraduate Biomedical Science student at the University of Surrey[cite: 2]. This repository showcases independent exploration into bioinformatics and structural biology, specifically focusing on molecular docking simulations.</p>
-                    <p>Rather than relying purely on complex terminal-based scripting, this project demonstrates a streamlined, user-friendly virtual screening workflow using PyRx (AutoDock Vina GUI). Ligand-protein binding interactions—such as docking PRIMA-1 against target receptors like 1TUP—are analyzed to evaluate binding affinities and structural conformations efficiently.</p>
+                    <h4>Biomedical Research & Molecular Docking Pipeline</h4>
+                    <p>Welcome! My name is Ali Al-Jumaili and I am an undergraduate Biomedical Science student at the University of Surrey[cite: 2]. This repository showcases my independent exploration into bioinformatics and structural biology, specifically focusing on molecular docking simulations[cite: 2].</p>
+                    <p>Rather than relying purely on complex terminal-based scripting, this project demonstrates a streamlined, user-friendly virtual screening workflow using PyRx (AutoDock Vina GUI)[cite: 2]. Here, I investigate ligand-protein binding interactions—such as docking PRIMA-1 against target receptors like 1TUP—to analyze binding affinities and structural conformations efficiently[cite: 2].</p>
 
-                    <h4> Repository Link</h4>
+                    <h4>Repository Structure</h4>
+                    <pre><code>p53-prima1-molecular-docking/
+├── data/
+│   ├── ligands/          # Input ligand files (SDF / PDBQT)
+│   ├── pdb_structures/   # Target receptor protein files (1TUP)
+│   └── processed/        # Generated docking output poses and score tables
+├── results/              # Organized analysis output files
+├── scripts/              # Custom automation or analysis scripts
+└── README.md             # Project documentation</code></pre>
+
+                    <h4>Virtual Screening Replication Guide (PyRx GUI)</h4>
+                    <ol>
+                        <li><strong>Load Molecules:</strong> Open PyRx and navigate to the AutoDock tab. Click Add Ligand to import your prepared ligand file (.pdbqt). Click Add Macromolecule to import your target protein receptor file (.pdbqt, e.g., 1TUP)[cite: 2].</li>
+                        <li><strong>Select Molecules for Docking:</strong> Go to the Select Molecules panel. Check the boxes next to your target ligand and macromolecule in the Navigator tree. Click Forward to proceed to the Vina Wizard search space setup[cite: 2].</li>
+                        <li><strong>Define the Search Space (Grid Box):</strong> Adjust the grid box dimensions and center coordinates in the 3D viewer to cover the active binding site of your protein. Click Forward to execute the AutoDock Vina docking calculation[cite: 2].</li>
+                        <li><strong>Analyze & Export Results:</strong> Once the progress bar completes, view the Binding Affinity (kcal/mol) table in the results panel. Export your binding affinity scores and download your docked conformations (.sdf or .pdb) into your data/processed/ directory[cite: 2].</li>
+                    </ol>
+
+                    <h4>Repository Link</h4>
                     <p><a href="https://github.com/jumonkey20/p53-prima1-molecular-docking" target="_blank" class="repo-link">View Full GitHub Repository →</a></p>
                 </div>
             </div>
@@ -311,7 +347,6 @@
         }
         function closeModal(modalId) {
             document.getElementById(modalId).style.display = 'none';
-            // Stops video playback when closing modal
             let modal = document.getElementById(modalId);
             let iframe = modal.querySelector('iframe');
             if (iframe) {
@@ -319,7 +354,6 @@
                 iframe.src = currSrc; 
             }
         }
-        // Close modal when clicking outside the content box
         window.onclick = function(event) {
             if (event.target.classList.contains('modal-overlay')) {
                 event.target.style.display = 'none';
@@ -331,6 +365,5 @@
             }
         }
     </script>
-
 </body>
 </html>
