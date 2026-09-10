@@ -96,7 +96,7 @@
                             <span class="card-tag spec">Bioinformatics / Python</span>
                         </div>
                         <p class="project-summary">
-                            An automated bioinformatics pipeline designed to analyze genetic divergence and antimicrobial resistance markers in <em>Pseudomonas aeruginosa</em> strains[cite: 1].
+                            An automated bioinformatics pipeline designed to analyze genetic divergence and antimicrobial resistance markers in <em>Pseudomonas aeruginosa</em> strains.
                         </p>
                         <div class="project-specs">
                             <div class="spec-block">
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <span class="tech-stack-label">Stack: Python, Biopython, Pandas, Git, GitHub Codespaces[cite: 1]</span>
+                            <span class="tech-stack-label">Stack: Python, Biopython, Pandas, Git, GitHub Codespaces</span>
                             <span class="view-prompt">Click to view Full README & Video Walkthrough →</span>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                             <span class="card-tag spec">Structural Biology</span>
                         </div>
                         <p class="project-summary">
-                            A virtual screening and structural bioinformatics workflow investigating ligand-protein binding interactions to evaluate pharmacological restoration of mutant p53 proteins[cite: 2].
+                            A virtual screening and structural bioinformatics workflow investigating ligand-protein binding interactions to evaluate pharmacological restoration of mutant p53 proteins.
                         </p>
                         <div class="project-specs">
                             <div class="spec-block">
@@ -126,7 +126,7 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <span class="tech-stack-label">Stack: PyRx, AutoDock Vina, PDB Data Banks[cite: 2]</span>
+                            <span class="tech-stack-label">Stack: PyRx, AutoDock Vina, PDB Data Banks</span>
                             <span class="view-prompt">Click to view Full README & Video Walkthrough →</span>
                         </div>
                     </div>
@@ -238,55 +238,55 @@
 
                 <div class="readme-section">
                     <h4>In Silico Profiling of Resistance and Virulence Markers in Pseudomonas aeruginosa</h4>
-                    <p>This project investigates the genetic divergence of key resistance and outer-membrane porin genes (such as oprD) across different strains of <em>Pseudomonas aeruginosa</em>[cite: 1]. By leveraging programmatic sequence alignment tools in Python, this workflow automates the detection of Single Nucleotide Polymorphisms (SNPs) and calculates percentage identity matrices between reference and clinical isolates[cite: 1].</p>
+                    <p>This project investigates the genetic divergence of key resistance and outer-membrane porin genes (such as oprD) across different strains of <em>Pseudomonas aeruginosa</em>. By leveraging programmatic sequence alignment tools in Python, this workflow automates the detection of Single Nucleotide Polymorphisms (SNPs) and calculates percentage identity matrices between reference and clinical isolates.</p>
 
                     <h4>Objectives</h4>
                     <ul>
-                        <li><strong>Automate Data Retrieval:</strong> Curate and manage FASTA-formatted nucleotide sequences from NCBI GenBank[cite: 1].</li>
-                        <li><strong>Sequence Alignment:</strong> Implement global pairwise sequence alignments using Biopython[cite: 1].</li>
-                        <li><strong>Variant Analysis:</strong> Quantify sequence identity scores and map divergence to understand potential mechanisms of antimicrobial resistance[cite: 1].</li>
+                        <li><strong>Automate Data Retrieval:</strong> Curate and manage FASTA-formatted nucleotide sequences from NCBI GenBank.</li>
+                        <li><strong>Sequence Alignment:</strong> Implement global pairwise sequence alignments using Biopython.</li>
+                        <li><strong>Variant Analysis:</strong> Quantify sequence identity scores and map divergence to understand potential mechanisms of antimicrobial resistance.</li>
                     </ul>
 
                     <h4>Methodology</h4>
                     <ol>
-                        <li><strong>Data Collection:</strong> Retrieved full-length coding sequences for target resistance-associated loci from *Pseudomonas aeruginosa* PAO1 (reference) and select variant strains via NCBI[cite: 1].</li>
-                        <li><strong>Computational Pipeline:</strong> Developed a Python-based analysis script utilizing the <code>Biopython</code> library (`Bio.Align`)[cite: 1].</li>
-                        <li><strong>Scoring Matrix:</strong> Executed global Needleman-Wunsch alignments with optimized gap penalties to evaluate sequence conservation and highlight structural mutation hotspots[cite: 1].</li>
+                        <li><strong>Data Collection:</strong> Retrieved full-length coding sequences for target resistance-associated loci from *Pseudomonas aeruginosa* PAO1 (reference) and select variant strains via NCBI.</li>
+                        <li><strong>Computational Pipeline:</strong> Developed a Python-based analysis script utilizing the <code>Biopython</code> library (`Bio.Align`).</li>
+                        <li><strong>Scoring Matrix:</strong> Executed global Needleman-Wunsch alignments with optimized gap penalties to evaluate sequence conservation and highlight structural mutation hotspots.</li>
                     </ol>
 
                     <h4>Tech Stack & Tools</h4>
                     <ul>
-                        <li><strong>Language:</strong> Python 3.x[cite: 1]</li>
-                        <li><strong>Libraries:</strong> Biopython, Pandas, Matplotlib[cite: 1]</li>
-                        <li><strong>Databases:</strong> NCBI Nucleotide / GenBank[cite: 1]</li>
+                        <li><strong>Language:</strong> Python 3.x</li>
+                        <li><strong>Libraries:</strong> Biopython, Pandas, Matplotlib</li>
+                        <li><strong>Databases:</strong> NCBI Nucleotide / GenBank</li>
                     </ul>
 
                     <h4>Results & Findings</h4>
                     <ul>
-                        <li>Successfully established an automated pipeline capable of parsing multi-FASTA files and outputting comparative alignment identity metrics[cite: 1].</li>
-                        <li>Identified regional sequence variations that correlate with known porin-mediated resistance profiles in clinical variants[cite: 1].</li>
+                        <li>Successfully established an automated pipeline capable of parsing multi-FASTA files and outputting comparative alignment identity metrics.</li>
+                        <li>Identified regional sequence variations that correlate with known porin-mediated resistance profiles in clinical variants.</li>
                     </ul>
 
                     <h4>Future Extensions</h4>
-                    <p>Integrating structural modeling (AlphaFold/PyMOL) to visualize how identified SNP substitutions impact extracellular loops of the target membrane proteins[cite: 1].</p>
+                    <p>Integrating structural modeling (AlphaFold/PyMOL) to visualize how identified SNP substitutions impact extracellular loops of the target membrane proteins.</p>
 
                     <h4>Step-by-Step Replication Guide</h4>
-                    <p><strong>Step 1: Create the Project Structure and Dependencies</strong>[cite: 1]</p>
-                    <p>Open your repository in GitHub Codespaces or your local terminal[cite: 1]. Create a file named `requirements.txt` and add package dependencies[cite: 1]:</p>
+                    <p><strong>Step 1: Create the Project Structure and Dependencies</strong></p>
+                    <p>Open your repository in GitHub Codespaces or your local terminal. Create a file named `requirements.txt` and add package dependencies:</p>
                     <pre><code>biopython
 pandas</code></pre>
-                    <p>Install dependencies via terminal[cite: 1]:</p>
+                    <p>Install dependencies via terminal:</p>
                     <pre><code>pip install -r requirements.txt</code></pre>
 
-                    <p><strong>Step 2: Create the FASTA Data File</strong>[cite: 1]</p>
-                    <p>Create a folder named `data/`. Inside, create `oprD_sequences.fasta` with your reference and variant protein sequences[cite: 1].</p>
+                    <p><strong>Step 2: Create the FASTA Data File</strong></p>
+                    <p>Create a folder named `data/`. Inside, create `oprD_sequences.fasta` with your reference and variant protein sequences.</p>
 
-                    <p><strong>Step 3: Create the Python Analysis Script</strong>[cite: 1]</p>
-                    <p>In the root directory, create `analyze_resistance.py` and implement the sequence parsing, alignment, and CSV export logic[cite: 1].</p>
+                    <p><strong>Step 3: Create the Python Analysis Script</strong></p>
+                    <p>In the root directory, create `analyze_resistance.py` and implement the sequence parsing, alignment, and CSV export logic.</p>
 
-                    <p><strong>Step 4: Execute the Pipeline</strong>[cite: 1]</p>
+                    <p><strong>Step 4: Execute the Pipeline</strong></p>
                     <pre><code>python analyze_resistance.py</code></pre>
-                    <p>Verify that the script generates the `alignment_results.csv` output summary file[cite: 1].</p>
+                    <p>Verify that the script generates the `alignment_results.csv` output summary file.</p>
 
                     <h4>Repository Link</h4>
                     <p><a href="https://github.com/jumonkey20/pseudomonas-snp-profiling" target="_blank" class="repo-link">View Full GitHub Repository →</a></p>
@@ -312,8 +312,8 @@ pandas</code></pre>
 
                 <div class="readme-section">
                     <h4>Biomedical Research & Molecular Docking Pipeline</h4>
-                    <p>Welcome! My name is Ali Al-Jumaili and I am an undergraduate Biomedical Science student at the University of Surrey[cite: 2]. This repository showcases my independent exploration into bioinformatics and structural biology, specifically focusing on molecular docking simulations[cite: 2].</p>
-                    <p>Rather than relying purely on complex terminal-based scripting, this project demonstrates a streamlined, user-friendly virtual screening workflow using PyRx (AutoDock Vina GUI)[cite: 2]. Here, I investigate ligand-protein binding interactions—such as docking PRIMA-1 against target receptors like 1TUP—to analyze binding affinities and structural conformations efficiently[cite: 2].</p>
+                    <p>Welcome! My name is Ali Al-Jumaili and I am an undergraduate Biomedical Science student at the University of Surrey. This repository showcases my independent exploration into bioinformatics and structural biology, specifically focusing on molecular docking simulations.</p>
+                    <p>Rather than relying purely on complex terminal-based scripting, this project demonstrates a streamlined, user-friendly virtual screening workflow using PyRx (AutoDock Vina GUI). Here, I investigate ligand-protein binding interactions—such as docking PRIMA-1 against target receptors like 1TUP—to analyze binding affinities and structural conformations efficiently.</p>
 
                     <h4>Repository Structure</h4>
                     <pre><code>p53-prima1-molecular-docking/
@@ -327,10 +327,10 @@ pandas</code></pre>
 
                     <h4>Virtual Screening Replication Guide (PyRx GUI)</h4>
                     <ol>
-                        <li><strong>Load Molecules:</strong> Open PyRx and navigate to the AutoDock tab. Click Add Ligand to import your prepared ligand file (.pdbqt). Click Add Macromolecule to import your target protein receptor file (.pdbqt, e.g., 1TUP)[cite: 2].</li>
-                        <li><strong>Select Molecules for Docking:</strong> Go to the Select Molecules panel. Check the boxes next to your target ligand and macromolecule in the Navigator tree. Click Forward to proceed to the Vina Wizard search space setup[cite: 2].</li>
-                        <li><strong>Define the Search Space (Grid Box):</strong> Adjust the grid box dimensions and center coordinates in the 3D viewer to cover the active binding site of your protein. Click Forward to execute the AutoDock Vina docking calculation[cite: 2].</li>
-                        <li><strong>Analyze & Export Results:</strong> Once the progress bar completes, view the Binding Affinity (kcal/mol) table in the results panel. Export your binding affinity scores and download your docked conformations (.sdf or .pdb) into your data/processed/ directory[cite: 2].</li>
+                        <li><strong>Load Molecules:</strong> Open PyRx and navigate to the AutoDock tab. Click Add Ligand to import your prepared ligand file (.pdbqt). Click Add Macromolecule to import your target protein receptor file (.pdbqt, e.g., 1TUP).</li>
+                        <li><strong>Select Molecules for Docking:</strong> Go to the Select Molecules panel. Check the boxes next to your target ligand and macromolecule in the Navigator tree. Click Forward to proceed to the Vina Wizard search space setup.</li>
+                        <li><strong>Define the Search Space (Grid Box):</strong> Adjust the grid box dimensions and center coordinates in the 3D viewer to cover the active binding site of your protein. Click Forward to execute the AutoDock Vina docking calculation.</li>
+                        <li><strong>Analyze & Export Results:</strong> Once the progress bar completes, view the Binding Affinity (kcal/mol) table in the results panel. Export your binding affinity scores and download your docked conformations (.sdf or .pdb) into your data/processed/ directory.</li>
                     </ol>
 
                     <h4>Repository Link</h4>
