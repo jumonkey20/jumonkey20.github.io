@@ -4,7 +4,7 @@
             <div class="modal-header">
                 <div>
                     <h3>Pseudomonas oprD Gene & Resistance Profiling</h3>
-                    <p class="modal-sub">Full Project README & Video Walkthrough</p>
+                    <p class="modal-sub">Project Breakdown & Video Walkthrough</p>
                 </div>
                 <button class="close-modal-btn" onclick="closeModal('pseudomonasModal')">&times;</button>
             </div>
@@ -15,33 +15,17 @@
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?autoplay=1" title="Pseudomonas Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <!-- Full README Documentation -->
+                <!-- Structured Overview -->
                 <div class="readme-section">
-                    <h4># Overview</h4>
-                    <p>This project investigates the genetic divergence of key resistance and outer-membrane porin genes (such as oprD) across different strains of <em>Pseudomonas aeruginosa</em>[cite: 1]. By leveraging programmatic sequence alignment tools in Python, this workflow automates the detection of Single Nucleotide Polymorphisms (SNPs) and calculates percentage identity matrices between reference and clinical isolates[cite: 1].</p>
+                    <h4># Biological Context & Objectives</h4>
+                    <p>Investigates genetic divergence and antimicrobial resistance markers in <em>Pseudomonas aeruginosa</em> by targeting the <code>oprD</code> gene encoding the OprD outer-membrane porin channel.</p>
                     
-                    <h4># Objectives</h4>
+                    <h4># Pipeline Methodology</h4>
                     <ul>
-                        <li><strong>Automate Data Retrieval:</strong> Curate and manage FASTA-formatted nucleotide sequences from NCBI GenBank[cite: 1].</li>
-                        <li><strong>Sequence Alignment:</strong> Implement global pairwise sequence alignments using Biopython[cite: 1].</li>
-                        <li><strong>Variant Analysis:</strong> Quantify sequence identity scores and map divergence to understand potential mechanisms of antimicrobial resistance[cite: 1].</li>
+                        <li><strong>Data Parsing:</strong> Ingests multi-FASTA files containing reference strain PAO1 (Accession: <code>NP_249649.1</code>) and variant clinical isolates using Biopython's <code>SeqIO</code>.</li>
+                        <li><strong>Global Alignment:</strong> Implements the Needleman-Wunsch algorithm via Biopython's <code>PairwiseAligner()</code> with custom gap scores (open: -10, extend: -0.5).</li>
+                        <li><strong>Quantification & Export:</strong> Programmatically calculates match counts, total lengths, and percentage identities into a Pandas DataFrame exported as <code>alignment_results.csv</code>.</li>
                     </ul>
-
-                    <h4># Methodology & Tech Stack</h4>
-                    <ul>
-                        <li><strong>Data Collection:</strong> Retrieved full-length coding sequences for target resistance-associated loci from *Pseudomonas aeruginosa* PAO1 (reference) and select variant strains via NCBI[cite: 1].</li>
-                        <li><strong>Computational Pipeline:</strong> Developed a Python-based analysis script utilizing the <code>Biopython</code> library (`Bio.Align`)[cite: 1].</li>
-                        <li><strong>Scoring Matrix:</strong> Executed global Needleman-Wunsch alignments with optimized gap penalties to evaluate sequence conservation and highlight structural mutation hotspots[cite: 1].</li>
-                        <li><strong>Stack:</strong> Python 3.x, Biopython, Pandas, Matplotlib, NCBI Nucleotide / GenBank[cite: 1].</li>
-                    </ul>
-
-                    <h4># Step-by-Step Replication Guide</h4>
-                    <p><strong>Step 1: Install Dependencies</strong></p>
-                    <pre><code>pip install biopython pandas</code></pre>
-                    <p><strong>Step 2: Create Data File</strong></p>
-                    <p>Place your multi-FASTA reference (`NP_249649.1_Reference_PAO1`) and variant files inside a `data/` folder[cite: 1].</p>
-                    <p><strong>Step 3: Execute Pipeline Script</strong></p>
-                    <pre><code>python analyze_resistance.py</code></pre>
 
                     <h4># Repository Link</h4>
                     <p><a href="https://github.com/jumonkey20/pseudomonas-snp-profiling" target="_blank" class="repo-link">View Full GitHub Repository →</a></p>
@@ -56,7 +40,7 @@
             <div class="modal-header">
                 <div>
                     <h3>p53 & PRIMA-1 Molecular Docking Pipeline</h3>
-                    <p class="modal-sub">Full Project README & Video Walkthrough</p>
+                    <p class="modal-sub">Project Breakdown & Video Walkthrough</p>
                 </div>
                 <button class="close-modal-btn" onclick="closeModal('p53Modal')">&times;</button>
             </div>
@@ -67,27 +51,16 @@
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?autoplay=1" title="p53 Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
 
-                <!-- Full README Documentation -->
+                <!-- Structured Overview -->
                 <div class="readme-section">
-                    <h4># About This Project</h4>
-                    <p>Authored by Ali Al-Jumaili, an undergraduate Biomedical Science student at the University of Surrey[cite: 2]. This repository showcases independent exploration into bioinformatics and structural biology, specifically focusing on molecular docking simulations[cite: 2].</p>
-                    <p>Rather than relying purely on complex terminal-based scripting, this project demonstrates a streamlined, user-friendly virtual screening workflow using PyRx (AutoDock Vina GUI)[cite: 2]. Ligand-protein binding interactions—such as docking PRIMA-1 against target receptors like 1TUP—are analyzed to evaluate binding affinities and structural conformations efficiently[cite: 2].</p>
+                    <h4># Biological Context & Objectives</h4>
+                    <p>A structural bioinformatics workflow investigating ligand-protein binding interactions to evaluate the pharmacological restoration of mutant p53 proteins using small-molecule PRIMA-1.</p>
 
-                    <h4># Repository Structure</h4>
-                    <pre><code>p53-prima1-molecular-docking/
-├── data/
-│   ├── ligands/          # Input ligand files (SDF / PDBQT)
-│   ├── pdb_structures/   # Target receptor protein files (1TUP)
-│   └── processed/        # Generated docking output poses and score tables
-├── results/              # Organized analysis output files
-└── scripts/              # Custom automation or analysis scripts</code></pre>
-
-                    <h4># Virtual Screening Workflow (PyRx GUI)</h4>
+                    <h4># Workflow Methodology</h4>
                     <ul>
-                        <li><strong>Load Molecules:</strong> Open PyRx, navigate to the AutoDock tab, and add your ligand and macromolecule (`.pdbqt` files, e.g., 1TUP)[cite: 2].</li>
-                        <li><strong>Select Molecules:</strong> Check boxes in the Navigator tree and proceed to the Vina Wizard search space setup[cite: 2].</li>
-                        <li><strong>Define Search Space:</strong> Adjust grid box dimensions and center coordinates in the 3D viewer to cover the active binding site[cite: 2].</li>
-                        <li><strong>Analyze & Export:</strong> Review Binding Affinity ($\text{kcal/mol}$) values and export docked conformations into your `data/processed/` directory[cite: 2].</li>
+                        <li><strong>Structure Preparation:</strong> Imports target macromolecule PDB structures (such as 1TUP) and prepares ligand coordinate files into PDBQT format.</li>
+                        <li><strong>Grid Box Optimization:</strong> Defines active binding site coordinates and bounding boxes to bound conformational search spaces.</li>
+                        <li><strong>Execution & Scoring:</strong> Executes AutoDock Vina calculations via PyRx to compute binding affinities ($\text{kcal/mol}$) and rank docking conformations.</li>
                     </ul>
 
                     <h4># Repository Link</h4>
