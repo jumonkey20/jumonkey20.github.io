@@ -16,7 +16,6 @@
                 <h2>Ali Haitham Al-Jumaili</h2>
                 <p class="tagline">BSc Biomedical Science (Second Year)</p>
                 <p class="university"><i class="fa-solid fa-graduation-cap"></i> University of Surrey</p>
-             
             </div>
             
             <div class="sidebar-card">
@@ -127,6 +126,27 @@
                         </div>
                         <div class="card-footer">
                             <span class="tech-stack-label">Stack: PyRx, AutoDock Vina, PDB Data Banks</span>
+                            <span class="view-prompt">Click to view Full README & Video Walkthrough →</span>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: RNA-Seq Pipeline -->
+                    <div class="detailed-card clickable-card" onclick="openModal('rnaseqModal')">
+                        <div class="detailed-header">
+                            <h3><i class="fa-solid fa-chart-line"></i> GSE52778 RNA-Seq Differential Expression Pipeline</h3>
+                            <span class="card-tag spec">Transcriptomics / Python</span>
+                        </div>
+                        <p class="project-summary">
+                            A reproducible, automated Python pipeline for end-to-end transcriptomic analysis analyzing glucocorticoid responses in human airway smooth muscle cells using PyDESeq2.
+                        </p>
+                        <div class="project-specs">
+                            <div class="spec-block">
+                                <strong>Biological Context:</strong>
+                                <p>Processes raw RNA-Seq count data from NCBI GEO (Dataset: GSE52778), fits a generalized linear model for differential gene expression, and maps sample variance.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="tech-stack-label">Stack: Python, PyDESeq2, Pandas, Seaborn, scikit-learn</span>
                             <span class="view-prompt">Click to view Full README & Video Walkthrough →</span>
                         </div>
                     </div>
@@ -335,6 +355,80 @@ pandas</code></pre>
 
                     <h4>Repository Link</h4>
                     <p><a href="https://github.com/jumonkey20/p53-prima1-molecular-docking" target="_blank" class="repo-link">View Full GitHub Repository →</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RNA-Seq Project Modal -->
+    <div id="rnaseqModal" class="modal-overlay">
+        <div class="modal-content project-modal-content">
+            <div class="modal-header">
+                <div>
+                    <h3>GSE52778 RNA-Seq Differential Expression Pipeline</h3>
+                    <p class="modal-sub">Full Project README & Video Walkthrough</p>
+                </div>
+                <button class="close-modal-btn" onclick="closeModal('rnaseqModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE?autoplay=1" title="RNA-Seq Walkthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+                <div class="readme-section">
+                    <h4>GSE52778 RNA-Seq Differential Expression Pipeline</h4>
+                    <p>A reproducible, automated Python pipeline for end-to-end transcriptomic analysis using PyDESeq2 and scikit-learn. This workflow processes raw RNA-Seq count data from NCBI GEO (Dataset: GSE52778), fits a generalized linear model for differential gene expression, and generates publication-grade Quality Control (PCA) and result (Volcano) visualizations.</p>
+
+                    <h4>Project Structure</h4>
+                    <pre><code>geo-rnaseq-pipeline/
+├── data/                    # Raw count matrices and auto-generated metadata
+│   ├── metadata.csv         # Experimental design matrix
+│   └── ...                  # Raw count files (.csv, .tsv, .txt)
+├── outputs/                 # Generated plots and analytical results
+│   ├── pca_plot.png         # Sample-level PCA variance plot
+│   ├── volcano_plot.png     # Differential expression volcano plot
+│   └── differential_expression_results.csv # Full statistical table
+├── pipeline.py              # Main automated execution script
+└── README.md                # Project documentation</code></pre>
+
+                    <h4>Requirements & Dependencies</h4>
+                    <p>This pipeline requires Python 3.10+ and the following core libraries:</p>
+                    <pre><code>pydeseq2
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn</code></pre>
+                    <p>You can install the dependencies via pip:</p>
+                    <pre><code>pip install pydeseq2 pandas numpy matplotlib seaborn scikit-learn</code></pre>
+
+                    <h4>Usage</h4>
+                    <ol>
+                        <li>Place your extracted raw count file inside the <code>data/</code> folder.</li>
+                        <li>Run the automated analysis pipeline from your terminal:
+                        <pre><code>python pipeline.py</code></pre></li>
+                        <li>Check the <code>outputs/</code> folder for generated statistics and visual assets.</li>
+                    </ol>
+
+                    <h4>Results & Visualizations</h4>
+                    
+                    <p><strong>Principal Component Analysis (PCA)</strong></p>
+                    <p>Global sample variance and clustering based on log-transformed, size-factor normalized counts.</p>
+                    <div style="margin: 15px 0; text-align: center;">
+                        <img src="outputs/pca_plot.png" alt="Principal Component Analysis Plot" style="max-width: 100%; border-radius: 8px; border: 1px solid #334155;">
+                    </div>
+
+                    <p><strong>Volcano Plot</strong></p>
+                    <p>Differential expression significance mapping highlighting genes meeting the false discovery rate (padj &lt; 0.05) and log2 fold-change thresholds (|LFC| &gt; 1).</p>
+                    <div style="margin: 15px 0; text-align: center;">
+                        <img src="outputs/volcano_plot.png" alt="Volcano Plot" style="max-width: 100%; border-radius: 8px; border: 1px solid #334155;">
+                    </div>
+
+                    <h4>Author</h4>
+                    <p>Ali Al-Jumaili<br>BSc Biomedical Science | University of Surrey</p>
+
+                    <h4>Repository Link</h4>
+                    <p><a href="https://github.com/jumonkey20/geo-rnaseq-pipeline" target="_blank" class="repo-link">View Full GitHub Repository →</a></p>
                 </div>
             </div>
         </div>
