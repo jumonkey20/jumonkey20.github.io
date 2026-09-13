@@ -384,10 +384,6 @@ pandas</code></pre>
 ├── data/                    # Raw count matrices and auto-generated metadata
 │   ├── metadata.csv         # Experimental design matrix
 │   └── ...                  # Raw count files (.csv, .tsv, .txt)
-├── outputs/                 # Generated plots and analytical results
-│   ├── pca_plot.png         # Sample-level PCA variance plot
-│   ├── volcano_plot.png     # Differential expression volcano plot
-│   └── differential_expression_results.csv # Full statistical table
 ├── pipeline.py              # Main automated execution script
 └── README.md                # Project documentation</code></pre>
 
@@ -407,7 +403,7 @@ scikit-learn</code></pre>
                         <li>Place your extracted raw count file inside the <code>data/</code> folder.</li>
                         <li>Run the automated analysis pipeline from your terminal:
                         <pre><code>python pipeline.py</code></pre></li>
-                        <li>Check the <code>outputs/</code> folder for generated statistics and visual assets.</li>
+                        <li>Check your folder for generated statistics and visual assets.</li>
                     </ol>
 
                     <h4>Results & Visualizations</h4>
@@ -415,13 +411,13 @@ scikit-learn</code></pre>
                     <p><strong>Principal Component Analysis (PCA)</strong></p>
                     <p>Global sample variance and clustering based on log-transformed, size-factor normalized counts.</p>
                     <div style="margin: 15px 0; text-align: center;">
-                        <img src="outputs/pca_plot.png" alt="Principal Component Analysis Plot" style="max-width: 100%; border-radius: 8px; border: 1px solid #334155;">
+                        <img src="pca_plot.png" alt="Principal Component Analysis Plot" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #334155;">
                     </div>
 
                     <p><strong>Volcano Plot</strong></p>
                     <p>Differential expression significance mapping highlighting genes meeting the false discovery rate (padj &lt; 0.05) and log2 fold-change thresholds (|LFC| &gt; 1).</p>
                     <div style="margin: 15px 0; text-align: center;">
-                        <img src="outputs/volcano_plot.png" alt="Volcano Plot" style="max-width: 100%; border-radius: 8px; border: 1px solid #334155;">
+                        <img src="volcano_plot.png" alt="Volcano Plot" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #334155;">
                     </div>
 
                     <h4>Author</h4>
